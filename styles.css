@@ -1,0 +1,125 @@
+:root {
+    --color-primary:#000000;
+    --color-primary-rgba: rgba(0, 0, 0, 0.2);
+    --color-secondary: #14213d;
+    --color-tertiary: #e5e5e5;
+    --color-white: #ffffff;
+    --transition: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    background: var(--color-white);
+    font-family: sans-serif;
+    color: var(--color-secondary);
+    max-width: 100vw;  
+}
+
+h1 { 
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.2;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    line-height: 1.2;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main [id="main"] {
+    display: flex;
+    flex: 1;
+}
+
+/* SKILLS STYLING */
+figure[id="skills"] .container{
+    width: 50%;
+}
+
+figure[id="skills"] .skill {
+    margin-bottom: 1rem;
+}
+
+figure[id="skills"] .topic {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+}
+
+figure[id="skills"] .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 1rem;
+    background-color: var(--color-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+figure[id="skills"] .item:hover {
+    background-color: var(--color-white);
+    transition: var(--transition);
+}
+
+figure[id="skills"] .progress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+figure[id="skills"] .progress-bar {
+    width: 100%;
+    height: 1rem;
+    background-color: var(--color-primary-rgba);
+}
+
+figure[id="skills"] .progress {
+    height: 1rem;
+    width: 75%;
+    background-color: var(--color-primary);
+}
+
+figure[id="skills"] .item:nth-of-type(2) .progress {
+    width: 70%;
+}
+
+figure[id="skills"] .item:nth-of-type(3) .progress {
+    width: 5%;
+}
+
+figure[id="skills"] .item:nth-of-type(4) .progress {
+    width: 0%;
+}
+
+figure[id="skills"] .item:nth-of-type(5) .progress {
+    width: 0%;
+}
+
+figure[id="skills"] .item:nth-of-type(6) .progress {
+    width: 0%;
+}
+
+/* MEDIA QUERY FOR SMALL PHONES */
+@media  only screen and (max-width: 480px) {
+    figure[id="skills"] .container {
+        width: 95%;
+        
+    }   
+}
